@@ -1,0 +1,329 @@
+
+/* ==========================================================================
+   Base styles:
+   ========================================================================== */
+   /* Fix to include padding and border in the total width for each element */
+   * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #E5E6E4;
+    /*background-image: url("../img/wet-asphalt-background.jpg");*/
+    /*text-align: center;*/
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+
+  }
+
+  h1 {
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  h2 {
+    color: black;
+    font-size: 20px;
+    margin-left: 107px;
+    font-family: 'Oxygen', sans-serif;
+  }
+
+  h3 {
+    margin:0;
+    font-size:20px;
+    font-family: 'Oxygen', sans-serif;
+  }
+
+  p { 
+    color: black;
+    padding-left: 107px;
+    padding-right: 106px;
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Catamaran', sans-serif;
+  }
+
+  a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 15px;
+      text-transform: uppercase;
+  }
+
+  nav {
+    margin-top: 30px;
+    position: static;
+
+  }
+
+/*.sidebarContainer {
+    background-color: gold;
+    width: 29%;
+    margin: 0 auto;
+    padding: 15px;
+    }*/
+    #nav-menu {
+      font-size: 18px;
+       font-family: 'Oxygen', sans-serif;
+
+
+    }
+
+    .MML-Link_Seperator {
+      display: inline-block;
+      padding: 19px 5px 10px 5px;
+      font-size: 18px;
+    }
+
+    .sidebar {
+      position: fixed;
+      transform: translateY(-100%);
+      transition: all 0.5s ease-in-out;
+      /*background-color: #73EA1B;*/
+      border-radius: 0px 5px 0px 5px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 15px;
+      top: 0px;
+      background: linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575);
+      background: -webkit-linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575); /* For Firefox 3.6 to 15 */
+      z-index: 1;
+    }
+
+    .sidebar h2 {
+      text-align: left;
+      top: 20px;
+      left: 10px;
+      font-size: 20px;
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+
+    .active {
+      transform: translateX(1px);
+    }
+
+    .close {
+      position: absolute;
+      top: 3px;
+      right: 10px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+
+    #service-pricing {
+      text-align: left;
+      color: #000000;
+      text-transform: uppercase;
+      padding-left: 5px;
+    }
+
+    /* Links inside the navbar */
+/*.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }*/
+
+  .hamburger {
+    cursor: pointer;
+    display: block;
+    top: 15px;
+    position: static;
+    margin-top: 20px;
+    margin-bottom: -6px;
+  }
+
+  .line {
+    border-bottom: 4px solid rgba(26, 130, 51, 0.63);
+    width: 35px;
+    margin-bottom: 0px;
+    margin-left: 38px;
+    margin-top: 8px;
+  }
+
+  .line:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Main content */
+  .main {
+    margin-top: 30px; 
+    color: white;
+    /* Setting the width and margin is key to a site working properly on different screen sizes*/
+    width: 75%;
+    margin:0 auto;
+
+    /* Add a top margin to avoid content overlay */
+  }
+
+
+
+  header {
+    /*background-image: url("../img/MiddlemanLiensSign.png*/
+        /*background-attachment: fixed;*/
+    /*background-size: 100%;
+    background-repeat: no-repeat;
+    padding:300px;
+    margin: 31px;
+    background-color: white;	
+    /background-position: center;
+    border-radius: 29px 30px 30px 29px;
+    box-shadow: 10px 10px 5px rgba(107, 107, 94, 0.56);	*/  
+    
+}
+  .header-image{
+      max-width: 100%;
+      display: block;
+  }
+
+  header h1 {
+    text-transform: uppercase;
+    position: relative;
+    color: #3a3838;
+  }
+
+  .backside-card-script {
+    display: inline-block;
+    text-align: left;
+    color: black;
+    padding-left: 15px;
+    line-height: 20px;
+    font-size: 15px;
+  }
+
+  .card-container {
+    perspective: 700px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .card1 {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    line-height: 72px;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    transition: all 0.6s ease;
+    transform-style: preserve-3d;
+  /*border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 5px #351d1d;*/
+}
+
+.front, .back {
+  background: #5bc0eb;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 300px;
+  height: 300px;
+  backface-visibility: hidden;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 10px rgba(107, 107, 94, 0.56);
+}
+
+.back {
+  transform:rotateY(180deg);
+}
+
+
+.card1:hover{
+ transform:rotateY(180deg); 
+}
+
+.card2 {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  line-height: 72px;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+  /*border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 5px #351d1d;*/
+}
+
+.card2:hover{
+ transform:rotateY(180deg); 
+}
+
+.card3 {
+  position: relative;
+  color:#fff;
+  line-height: 72px;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+  /*border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 5px #351d1d;*/
+}
+
+.card3:hover{
+ transform:rotateY(180deg); 
+}
+
+.button {
+  display: inline;
+  border-radius: 5px 5px 5px 5px;
+  border: black;
+  white-space: 50px;
+}
+
+.grid-wrapper-autoReg {
+  display: flex;
+
+}
+
+.col-1-2 {
+  flex-basis:47%;
+}
+
+.grid-wrapper-autoDismantler {
+    
+}
+
+
+/* This container for forms page.*/
+.Container {
+ background-color: aqua;
+ width: 60%;
+ margin: 0 auto;
+ padding: 15px;
+
+}
+
+
+
+
+/* Fix for responsive images */
+ .lienImages {
+  max-width: 85%;
+  margin: 0 auto;
+  position: absolute;
+  right: 32px;
+  bottom: 28px;
+  left: 25px;
+  border: solid;
+  border-color: #757575;
+  border-radius: 10px 10px 10px 10px;
+
+}
+
+
+
+
