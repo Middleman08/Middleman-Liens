@@ -1,0 +1,591 @@
+
+/* ==========================================================================
+   Base styles:
+   ========================================================================== */
+   /* Fix to include padding and border in the total width for each element */
+   * {
+    box-sizing: border-box;
+  }
+
+  body {
+
+    background: linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575, #20BF55);
+    background: -webkit-linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575, #20BF55); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575, #20BF55); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575, #20BF55); /* For Firefox 3.6 to 15 */
+    font-family: 'Oxygen', sans-serif;
+    text-decoration: none;
+
+  }
+
+  h1 {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  h2 {
+    color: black;
+    font-size: 20px;
+    margin-left: 88px;
+    font-family: 'Oxygen', sans-serif;
+  }
+
+  h3 {
+    margin:0;
+    font-size:20px;
+    font-family: 'Oxygen', sans-serif;
+  }
+
+  p { 
+    color: black;
+    padding-left: 87px;
+    padding-right: 69px;
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Catamaran', sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  nav {
+    margin-top: 30px;
+    position: static;
+
+  }
+
+  #nav-menu {
+    font-size: 32px;
+    font-family: 'Oxygen', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 11px;
+    margin-left: 2px;
+  }
+
+  .MML-Link_Seperator {
+    display: inline-flex;
+    padding: 3px 5px 3px 5px;
+    font-size: 18px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+    /*background-color: #73EA1B;*/
+    border-radius: 0px 5px 0px 5px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    top: 0px;
+    background: linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575);
+    background: -webkit-linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#0B4F6C, #01BAEF, #FBFBFF, #757575); /* For Firefox 3.6 to 15 */
+    z-index: 1;
+  }
+
+  .sidebar h2 {
+    text-align: left;
+    top: 20px;
+    left: 10px;
+    font-size: 20px;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+
+  .active {
+    transform: translateX(1px);
+  }
+
+  .close {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+
+  #service-pricing {
+    text-align: left;
+    color: #000000;
+    text-transform: uppercase;
+    padding-left: 5px;
+  }
+
+  /* Links inside the navbar */
+/*.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }*/
+
+  .hamburger {
+    cursor: pointer;
+    display: block;
+    top: 15px;
+    position: static;
+    margin-top: 20px;
+    margin-bottom: -6px;
+  }
+
+  .line {
+    border-bottom: 4px solid #f5a136;
+    width: 35px;
+    margin-bottom: 0px;
+    margin-left: 38px;
+    margin-top: 8px;
+  }
+
+  .line:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Main content */
+  .main {
+    margin-top: 30px; 
+    /* Setting the width and margin is key to a site working properly on different screen sizes*/
+    width: 75%;
+    margin:0 auto;
+
+    /* Add a top margin to avoid content overlay */
+  }
+
+
+
+  header {
+    /*padding:300px;
+    margin: 31px;*/    
+  }
+
+  .header-image{
+    max-width: 100%;
+    display: block;
+    border-radius: 29px 30px 30px 29px;
+    box-shadow: 10px 10px 5px rgba(107, 107, 94, 0.56);
+  }
+
+  header h1 {
+    text-transform: uppercase;
+    position: relative;
+    color: #f5a136;
+    text-align: center;
+    line-height: 0.2em;
+
+  }
+
+  .backside-card-script {
+    display: inline-block;
+    text-align: left;
+    color: black;
+    padding-left: 15px;
+    line-height: 20px;
+    font-size: 15px;
+  }
+
+  .card-container {
+    perspective: 700px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+
+
+  .card1 {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    line-height: 72px;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    transition: all 0.6s ease;
+    transform-style: preserve-3d;
+  /*border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 5px #351d1d;*/
+}
+
+
+
+.front, .back {
+  background: #5bc0eb;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 300px;
+  height: 300px;
+  backface-visibility: hidden;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 10px rgba(107, 107, 94, 0.56);
+}
+
+.back {
+  transform:rotateY(180deg);
+}
+
+
+.card1:hover{
+ transform:rotateY(180deg); 
+}
+
+.card2 {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  line-height: 72px;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+  /*border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 5px #351d1d;*/
+}
+
+.card2:hover{
+ transform:rotateY(180deg); 
+}
+
+.card3 {
+  position: relative;
+  color:#fff;
+  line-height: 72px;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+  /*border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 5px #351d1d;*/
+}
+
+.card3:hover{
+ transform:rotateY(180deg); 
+}
+
+.order-button {
+  font-family: 'Catamaran', sans-serif;
+  display: inline;
+  border-radius: 15px;
+  border: 1px solid #666;
+  cursor: pointer;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  width: 140px;
+  margin-left: 64px;
+  margin-top: 6px;
+  margin-bottom: auto;
+  webkit-border-radius: 15px;
+  background: linear-gradient(#FDE74C, #FA7921);
+  background: -webkit-linear-gradient(#FDE74C, #FA7921); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FDE74C, #FA7921); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FDE74C, #FA7921); /* For Firefox 3.6 to 15 */
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #444;
+  width: 15%;
+}
+
+.order-button:active {
+  background: linear-gradient(#FA7921, #E55934, #FA7921);
+  border-radius: 15px;
+
+}
+
+#place-order-button {
+  display: flex;
+  justisfy-content: center;
+}
+
+
+.grid-wrapper-autoReg {
+  display: flex;
+
+}
+
+.column-1 {
+  width: 56%;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.column-2 {
+  width: 50%;
+}
+
+.service-pricing {
+  display: flex;
+  justify-content: space-between; 
+
+}
+
+.regserv {
+  width:70%;
+
+}
+.reg-price {
+  width: 21%
+}
+
+.regserv, .reg-price {
+  font-family: 'Catamaran', sans-serif;
+  line-height: 23px;
+  font-size: 15px;
+}
+
+
+.grid-wrapper-autoDismantler {
+  display: flex;
+  position: relative;
+}
+
+.grid-wrapper-storeLocator {
+  display: flex;
+  position: relative;
+}
+
+#Store {
+  margin: auto;
+  margin-top: 29px;
+  font-size: 24px;
+  font-family: "Oxygen", sans-serif;
+  width: 66%;
+}
+
+}
+
+.MML-contact {
+  font-size: 15px;
+  font-family: "Catamaran", sans-serif;
+  width: 66%;
+}
+
+
+
+
+.see-map {
+  margin: 35px;
+  margin: 25px;
+  margin-left: 38px;
+}
+
+
+
+/* This container for forms page.*/
+.Container {
+  background-color: aqua;
+  width: 60%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+
+
+
+
+/* Fix for responsive images */
+.lienImages {
+  max-width: 85%;
+  margin: 0 auto;
+  : absolute;
+  right: 32px;
+  bottom: 28px;
+  left: 25px;
+  border: solid;
+  border-color: #757575;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.salvage-porsche {
+  max-width: 91%;
+  margin: 0 auto;
+  position: relative;
+  top: 35px;
+  right: 32px;
+  bottom: 0px;
+  left: 0px;
+  /*border: solid;*/
+  /*border-color: #757575;*/
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 10px rgba(107, 107, 94, 0.56);
+
+}
+
+#map, iframe {
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 10px rgba(107, 107, 94, 0.56);
+}
+
+.contact {
+  margin-left: 50px;
+}
+
+.modal {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    top: 0;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+}
+
+.modal-content {
+  padding: 40px 20px;
+  color: #444;
+  background-color: white;
+  width: 60%;
+}
+.app-button {
+  font-family: 'Catamaran', sans-serif;
+  display: inline;
+  border-radius: 15px;
+  border: 1px solid #666;
+  cursor: pointer;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  width: 140px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: auto;
+  webkit-border-radius: 15px;
+  background: linear-gradient(#FDE74C, #FA7921);
+  background: -webkit-linear-gradient(#FDE74C, #FA7921); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FDE74C, #FA7921); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FDE74C, #FA7921); /* For Firefox 3.6 to 15 */
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #444;
+  width: 25%
+}
+
+.modal-intro {
+  margin: auto 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 75%;
+}
+
+input[type=text] {
+    width: 75%;
+    padding: 5px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    display:block;
+}
+
+#questbox_label {
+  display: block;
+  padding: 5px;
+}
+
+textarea {
+  width: 75%;
+    height: 200px;
+}
+#close,#showModal {
+  transform: translateX(50deg);
+  font-family: 'Catamaran', sans-serif;
+  display: inline-block;
+  border-radius: 15px;
+  border: 1px solid #666;
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 140px;
+  margin-left: 180px;
+  margin-top: 18px;
+  webkit-border-radius: 15px;
+  background: linear-gradient(#FDE74C, #FA7921);
+  background: -webkit-linear-gradient(#FDE74C, #FA7921); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FDE74C, #FA7921); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FDE74C, #FA7921); /* For Firefox 3.6 to 15 */
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #444;
+
+}
+
+#close, #showModal:active {
+  background: linear-gradient(#FA7921, #E55934, #FA7921);
+  border-radius: 15px;
+
+}
+
+.close-button {
+  position: relative;
+    top: -57px;
+    left: 118px;
+}
+
+.social-links {
+    position: absolute;
+    right: 185px;
+}
+
+
+/*.modal-background {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;*/
+
+@media (max-width: 900px) {
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+@media (max-width: 600px) {
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .front {
+    display: none;
+  }
+
+  .back {
+    display: block;
+    transform:none; 
+  }
+
+  }/* end of media query*/
+
+
+
+
